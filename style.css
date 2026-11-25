@@ -4,7 +4,7 @@
   --accent: #1d5fd1; --accent-ink: #ffffff; --accent-soft: #e6eefc;
   --ok: #1d7a4f; --ok-soft: #e3f3ea; --warn: #9a5b00; --warn-soft: #fbefdc; --tint: #e9eef5;
   --soft-band: #eaf1fb; --deep: #12356e; --deep-ink: #ffffff; --deep-muted: #c9d8ee; --deep-link: #bcd6ff; --deep-pop: #7fe0a8;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   color-scheme: light dark;
 }
@@ -16,7 +16,8 @@
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { overflow-x: clip; margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--font); }
+body { overflow-x: clip; margin: 0; background: var(--bg); color: var(--ink); font: 300 17px/1.65 var(--font); }
+strong, b { font-weight: 600; }
 a { color: var(--accent); }
 header.site a:focus-visible { outline-color: var(--deep-ink); }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
@@ -31,16 +32,16 @@ header.site::after {
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 48' preserveAspectRatio='none'%3E%3Cpath d='M0 48V30C260 2 520 0 780 20S1220 46 1440 14V48Z'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
 }
 header.site .in { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
-.brand { font-weight: 800; font-size: 1.25rem; text-decoration: none; color: var(--deep-ink); letter-spacing: -.01em; }
+.brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--deep-ink); letter-spacing: -.01em; }
 .brand span { color: var(--deep-pop); }
 nav.site { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-left: auto; font-size: .95rem; }
 nav.site a { text-decoration: none; color: var(--deep-muted); padding: 4px 0; }
 nav.site a:hover, nav.site a[aria-current="page"] { color: var(--deep-ink); text-decoration: underline; text-underline-offset: 4px; }
 
 main { overflow-wrap: break-word; max-width: 760px; margin: 0 auto; padding: 64px 20px 64px; display: flex; flex-direction: column; gap: 28px; }
-h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; margin: 0; letter-spacing: -.015em; text-wrap: balance; }
-h2 { font-size: 1.4rem; line-height: 1.25; margin: 0; text-wrap: balance; }
-h3 { font-size: 1.1rem; margin: 0; }
+h1 { font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 500; line-height: 1.12; margin: 0; letter-spacing: -.025em; text-wrap: balance; }
+h2 { font-weight: 600; letter-spacing: -.01em; font-size: 1.4rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+h3 { font-size: 1.1rem; font-weight: 600; margin: 0; }
 p { margin: 0; }
 section { display: flex; flex-direction: column; gap: 12px; }
 .lede { font-size: 1.2rem; color: var(--muted); max-width: 60ch; }
@@ -69,7 +70,7 @@ kbd { font-family: var(--mono); font-size: .85em; border: 1px solid var(--line);
 .card .tag { font: 600 .75rem/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 .card p { color: var(--muted); }
 .card .btn { margin-top: auto; align-self: flex-start; }
-.btn { display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 650; text-decoration: none; border: 1.5px solid var(--accent); color: var(--accent); background: transparent; font: inherit; font-weight: 650; cursor: pointer; }
+.btn { display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; border: 1.5px solid var(--accent); color: var(--accent); background: transparent; font: inherit; font-weight: 600; cursor: pointer; }
 .btn.primary { background: var(--accent); color: var(--accent-ink); }
 
 /* Steps */
@@ -85,7 +86,7 @@ ol.steps > li > div { min-width: 0; display: flex; flex-direction: column; gap: 
 
 /* Proof strip */
 .proof { flex-direction: row; align-items: flex-start; gap: 24px; }
-.proof-num { font-size: clamp(2.8rem, 10vw, 4rem); font-weight: 800; line-height: 1; color: var(--deep-pop); letter-spacing: -.02em; }
+.proof-num { font-size: clamp(2.8rem, 10vw, 4.2rem); font-weight: 600; line-height: 1; color: var(--deep-pop); letter-spacing: -.02em; }
 .proof h2 { font-size: 1.2rem; }
 .proof > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 @media (max-width: 480px) { .proof { flex-direction: column; align-items: flex-start; } }
