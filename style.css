@@ -61,6 +61,19 @@ ol.steps > li > div { min-width: 0; display: flex; flex-direction: column; gap: 
 .note { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; color: var(--muted); }
 .status { min-height: 1.4em; font-size: .9rem; color: var(--muted); }
 
+/* Proof strip */
+.proof { flex-direction: row; align-items: center; gap: 20px; padding: 20px 22px; border: 1px solid var(--line); border-left: 6px solid var(--ok); border-radius: 12px; background: var(--surface); }
+.proof-num { font-size: clamp(2.6rem, 9vw, 3.4rem); font-weight: 800; line-height: 1; color: var(--ok); letter-spacing: -.02em; }
+.proof h2 { font-size: 1.2rem; }
+.proof > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+@media (max-width: 480px) { .proof { flex-direction: column; align-items: flex-start; } }
+a.fn { font-size: .75em; vertical-align: super; line-height: 0; margin-left: 2px; padding: 2px 4px; text-decoration: none; }
+a.fn:hover { text-decoration: underline; }
+
+/* Sources */
+.sources { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 24px; }
+.sources h2 { font-size: 1rem; color: var(--ink); }
+
 /* Value props */
 .props { gap: 0; }
 .prop { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 32px 0; border-top: 1px solid var(--line); align-items: center; }
