@@ -12,3 +12,6 @@ Check every page against this list before pushing. Last full check: 2026-11-25 (
 6. **Targets:** buttons, nav and footer links at least 24px tall (inline text links are exempt).
 7. **Live updates:** the copy-prompt status is a polite live region.
 8. **Motion:** none, apart from smooth scrolling, which is off under Reduce Motion.
+9. **Mobile menu (640px and narrower):** a real `<button>` with `aria-expanded` and `aria-controls`, 44px tall, labeled
+   "Menu". Escape closes it and returns focus to the button; clicking outside closes it. Without JavaScript the links
+   simply stay visible.
