@@ -59,6 +59,13 @@ ol.steps > li > div { min-width: 0; display: flex; flex-direction: column; gap: 
 .note { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; color: var(--muted); }
 .status { min-height: 1.4em; font-size: .9rem; color: var(--muted); }
 
+/* Product screenshot */
+figure.shot { margin: 8px 0 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+.shot-bar { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.shot-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+figure.shot img { display: block; width: 100%; height: auto; }
+figure.shot figcaption { padding: 10px 14px; font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); }
+
 /* About */
 .links { display: flex; flex-wrap: wrap; gap: 12px; }
 
