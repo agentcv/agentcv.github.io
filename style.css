@@ -84,8 +84,6 @@ a.fn:hover { text-decoration: underline; }
 @media (min-width: 720px) {
   .prop { grid-template-columns: 1fr 1.1fr; gap: 36px; }
   .prop:nth-of-type(even) .copy { order: 2; }
-  .prop:last-of-type { grid-template-columns: 1fr; }
-  .prop:last-of-type .copy { order: 0; }
 }
 /* Illustration colors (follow the theme) */
 .f-tint { fill: var(--tint); } .f-card { fill: var(--surface); stroke: var(--line); }
@@ -106,7 +104,7 @@ figure.shot { margin: 8px 0 0; border: 1px solid var(--line); border-radius: 12p
 .shot-bar { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
 .shot-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
 figure.shot img { display: block; width: 100%; height: auto; }
-figure.shot figcaption { padding: 10px 14px; font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); }
+figure.shot figcaption { padding: 10px 14px; font-size: .82rem; line-height: 1.45; color: var(--muted); border-top: 1px solid var(--line); }
 
 /* About */
 .links { display: flex; flex-wrap: wrap; gap: 12px; }
