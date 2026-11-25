@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set up agentCV with ChatGPT Codex</title>
+<meta name="description" content="Step-by-step setup for agentCV in Codex, OpenAI's coding agent, signed in with ChatGPT.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5fd1'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="in">
+  <a class="brand" href="./">agent<span>CV</span></a>
+  <nav class="site" aria-label="Main">
+    <a href="./">Home</a>
+    <a href="claude.html">Set up with Claude</a>
+    <a href="codex.html" aria-current="page">Set up with Codex</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/duprejohn/agentcv">GitHub</a>
+  </nav>
+</div></header>
+
+<main id="main">
+  <section>
+    <h1>Set up agentCV with ChatGPT Codex</h1>
+    <p class="lede">Codex is OpenAI's coding agent. It works in a folder on your computer and reads agentCV's operating manual on its own.</p>
+    <p class="note">Codex support is new and less tested than Claude. If something doesn't work, please tell us in <a href="https://github.com/duprejohn/agentcv/issues">GitHub Issues</a>.</p>
+  </section>
+
+  <section aria-labelledby="need">
+    <h2 id="need">What you need</h2>
+    <ul>
+      <li>A ChatGPT plan that includes Codex. <a href="https://openai.com/codex">OpenAI's Codex page</a> lists which plans do.</li>
+      <li>A Mac, Windows or Linux computer with Python 3.9 or newer.</li>
+      <li>Your LinkedIn profile, saved as a PDF (step 3 shows how).</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="steps">
+    <h2 id="steps">Steps</h2>
+    <ol class="steps" role="list">
+      <li><div>
+        <h3>Install Codex</h3>
+        <p>Follow the install instructions on <a href="https://openai.com/codex">OpenAI's Codex page</a>. In a terminal, the usual command is:</p>
+        <p class="cmd">npm install -g @openai/codex</p>
+        <p class="small muted">That needs Node.js. OpenAI also offers an app and editor extensions; any of them works if it can open a folder on your computer.</p>
+      </div></li>
+      <li><div>
+        <h3>Download agentCV</h3>
+        <p><a class="btn primary" href="https://github.com/duprejohn/agentcv/releases/latest">Go to the latest release</a></p>
+        <p>Under <strong>Assets</strong>, download <code>agentcv-&lt;version&gt;.zip</code> and unzip it. You get a folder called <code>agentcv</code>. Move it somewhere private, like your Documents folder. You only download once; later updates come through your agent.</p>
+      </div></li>
+      <li><div>
+        <h3>Add your LinkedIn profile</h3>
+        <p>On your LinkedIn profile page, select <strong>More</strong>, then <strong>Save to PDF</strong>. Put that PDF, and your current resume if you have one, in <code>agentcv/profile/materials/</code>.</p>
+      </div></li>
+      <li><div>
+        <h3>Open the folder in Codex</h3>
+        <p>In a terminal, go to your <code>agentcv</code> folder and start Codex:</p>
+        <p class="cmd">cd ~/Documents/agentcv
+codex</p>
+        <p>Sign in with your ChatGPT account when it asks.</p>
+      </div></li>
+      <li><div>
+        <h3>Paste the starter prompt</h3>
+        <div class="prompt">
+          <p id="starter">You're my job search agency, and I'm your only client. Read AGENTS.md in this folder: it's your operating manual. This is our first session, so start setup at Phase 1. Read my LinkedIn PDF and resume in profile/materials/, then interview me a few questions at a time. Coach me to a strong primary resume, help me update LinkedIn to match it, and then ask me what jobs and industries I want to target. Don't send, submit or post anything without my explicit OK.</p>
+          <div><button class="btn" type="button" data-copy="starter">Copy the prompt</button></div>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+      </div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="perm">
+    <h2 id="perm">Permissions to allow</h2>
+    <ul>
+      <li><strong>Running the Python scripts</strong> in <code>scripts/</code>. They build your resumes, PDFs, job sweeps and dashboard.</li>
+      <li><strong>Internet access</strong> for job sweeps and agentCV updates. Codex may ask before it goes online; allow it for those tasks.</li>
+      <li>Keep Codex working in the <code>agentcv</code> folder only.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="next">
+    <h2 id="next">What happens next</h2>
+    <p>Setup runs in four phases over one to three sessions:</p>
+    <ol>
+      <li><strong>Intake:</strong> your agent reads your LinkedIn and resume, then asks about the gaps: numbers, scope, team size.</li>
+      <li><strong>Primary resume:</strong> it coaches you bullet by bullet to a resume built for applicant tracking systems, using only facts you confirm.</li>
+      <li><strong>LinkedIn:</strong> it writes matching LinkedIn copy for you to paste in. It never edits LinkedIn itself.</li>
+      <li><strong>Targets:</strong> it asks what roles, industries, pay and location you want, then builds your job board list and runs the first search.</li>
+    </ol>
+    <p>After that, open the same folder each day and say <strong>"start my morning."</strong> Say <strong>"done for today"</strong> when you finish.</p>
+  </section>
+</main>
+<footer class="site"><div class="in">
+  <span>agentCV · MIT license</span>
+  <a href="https://github.com/duprejohn/agentcv/releases/latest">Latest release</a>
+  <a href="about.html">About the author</a>
+  <span>Not affiliated with Anthropic or OpenAI.</span>
+</div></footer>
+<script src="copy.js"></script>
+</body>
+</html>

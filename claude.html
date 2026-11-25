@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set up agentCV with Claude Cowork</title>
+<meta name="description" content="Step-by-step setup for agentCV in Claude Cowork, the Claude desktop app's file mode.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5fd1'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="in">
+  <a class="brand" href="./">agent<span>CV</span></a>
+  <nav class="site" aria-label="Main">
+    <a href="./">Home</a>
+    <a href="claude.html" aria-current="page">Set up with Claude</a>
+    <a href="codex.html">Set up with Codex</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/duprejohn/agentcv">GitHub</a>
+  </nav>
+</div></header>
+
+<main id="main">
+  <section>
+    <h1>Set up agentCV with Claude Cowork</h1>
+    <p class="lede">Cowork is the mode of the Claude desktop app that works with files on your computer. agentCV was built and tested here.</p>
+  </section>
+
+  <section aria-labelledby="need">
+    <h2 id="need">What you need</h2>
+    <ul>
+      <li>A paid Claude plan: Pro, Max, Team or Enterprise. On Team or Enterprise, your admin may need to turn Cowork on.</li>
+      <li>A Mac or Windows computer with Python 3.9 or newer. Macs have it already; on Windows, install it from python.org or the Microsoft Store.</li>
+      <li>Your LinkedIn profile, saved as a PDF (step 3 shows how).</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="steps">
+    <h2 id="steps">Steps</h2>
+    <ol class="steps" role="list">
+      <li><div>
+        <h3>Install the Claude desktop app</h3>
+        <p>Download it from <a href="https://claude.com/download">claude.com/download</a>, sign in, and switch from <strong>Chat</strong> to <strong>Cowork</strong> at the top of the app.</p>
+      </div></li>
+      <li><div>
+        <h3>Download agentCV</h3>
+        <p><a class="btn primary" href="https://github.com/duprejohn/agentcv/releases/latest">Go to the latest release</a></p>
+        <p>Under <strong>Assets</strong>, download <code>agentcv-&lt;version&gt;.zip</code> and unzip it. You get a folder called <code>agentcv</code>. Move it somewhere private, like your Documents folder. You only download once; later updates come through your agent.</p>
+      </div></li>
+      <li><div>
+        <h3>Add your LinkedIn profile</h3>
+        <p>On your LinkedIn profile page, select <strong>More</strong>, then <strong>Save to PDF</strong>. Put that PDF, and your current resume if you have one, in <code>agentcv/profile/materials/</code>.</p>
+      </div></li>
+      <li><div>
+        <h3>Open the folder in Cowork</h3>
+        <p>Start a new task, choose <strong>Use an existing folder</strong> (the wording may vary) and pick your <code>agentcv</code> folder. When Claude asks for access, allow <strong>this folder only</strong>.</p>
+      </div></li>
+      <li><div>
+        <h3>Paste the starter prompt</h3>
+        <div class="prompt">
+          <p id="starter">You're my job search agency, and I'm your only client. Read AGENTS.md in this folder: it's your operating manual. This is our first session, so start setup at Phase 1. Read my LinkedIn PDF and resume in profile/materials/, then interview me a few questions at a time. Coach me to a strong primary resume, help me update LinkedIn to match it, and then ask me what jobs and industries I want to target. Don't send, submit or post anything without my explicit OK.</p>
+          <div><button class="btn" type="button" data-copy="starter">Copy the prompt</button></div>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+      </div></li>
+    </ol>
+    <p class="note">The app's layout changes from time to time. If a step doesn't match what you see, Anthropic's <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork">Get started with Cowork</a> guide has the current version.</p>
+  </section>
+
+  <section aria-labelledby="next">
+    <h2 id="next">What happens next</h2>
+    <p>Setup runs in four phases over one to three sessions:</p>
+    <ol>
+      <li><strong>Intake:</strong> your agent reads your LinkedIn and resume, then asks about the gaps: numbers, scope, team size.</li>
+      <li><strong>Primary resume:</strong> it coaches you bullet by bullet to a resume built for applicant tracking systems, using only facts you confirm.</li>
+      <li><strong>LinkedIn:</strong> it writes matching LinkedIn copy for you to paste in. It never edits LinkedIn itself.</li>
+      <li><strong>Targets:</strong> it asks what roles, industries, pay and location you want, then builds your job board list and runs the first search.</li>
+    </ol>
+    <p>After that, open the same folder each day and say <strong>"start my morning."</strong> Say <strong>"done for today"</strong> when you finish.</p>
+  </section>
+
+  <section aria-labelledby="term">
+    <h2 id="term">Prefer the terminal?</h2>
+    <p><a href="https://claude.com/claude-code">Claude Code</a> works too. Open a terminal in the <code>agentcv</code> folder, run <code>claude</code>, and paste the same starter prompt.</p>
+  </section>
+</main>
+<footer class="site"><div class="in">
+  <span>agentCV · MIT license</span>
+  <a href="https://github.com/duprejohn/agentcv/releases/latest">Latest release</a>
+  <a href="about.html">About the author</a>
+  <span>Not affiliated with Anthropic or OpenAI.</span>
+</div></footer>
+<script src="copy.js"></script>
+</body>
+</html>
