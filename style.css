@@ -136,6 +136,7 @@ a.fn:hover { text-decoration: underline; }
 .cta .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .band-soft { background: var(--soft-band); border-top: 0 !important; }
 .band-soft + .prop { border-top: 0; }
+.props .prop:first-of-type { border-top: 0; }
 .band-soft .f-tint { fill: var(--surface); }
 
 /* Product screenshot */
