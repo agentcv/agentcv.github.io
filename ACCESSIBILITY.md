@@ -15,3 +15,6 @@ Check every page against this list before pushing. Last full check: 2026-11-25 (
 9. **Mobile menu (640px and narrower):** a real `<button>` with `aria-expanded` and `aria-controls`, 44 by 44px, shown as a hamburger
    icon with a visually hidden "Menu" label for screen readers. Escape closes it and returns focus to the button; clicking outside closes it. Without JavaScript the links
    simply stay visible.
+10. **Feedback form:** every field has a visible label; the radio group has a legend; a missing summary shows an
+    error in text (not color alone), sets `aria-invalid`, and moves focus to the field. The form opens a pre-filled
+    GitHub issue and sends nothing itself.

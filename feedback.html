@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send feedback · agentCV</title>
+<meta name="description" content="Tell the agentCV project what is working, what is not, and what you wish it did.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5fd1'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="in">
+  <a class="brand" href="./">agent<span>CV</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span class="bars" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+  <nav class="site" id="site-nav" aria-label="Main">
+    <a href="./">Home</a>
+    <a href="claude.html">Set up with Claude</a>
+    <a href="codex.html">Set up with Codex</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html" aria-current="page">Feedback</a>
+    <a href="https://github.com/duprejohn/agentcv">GitHub</a>
+  </nav>
+</div></header>
+
+<main id="main">
+  <section>
+    <h1>Send feedback</h1>
+    <p class="lede">Is agentCV working for you, or getting in your way? Tell us. Every note helps make the next release better.</p>
+  </section>
+
+  <section aria-labelledby="form-h">
+    <h2 id="form-h">Your feedback</h2>
+    <p class="note">Feedback is posted as a public issue on GitHub, so you'll need a free GitHub account. Please don't include your resume, salary or anyone's personal details.</p>
+    <form id="fb" class="fb" novalidate>
+      <fieldset>
+        <legend>What kind of feedback?</legend>
+        <label class="choice"><input type="radio" name="kind" value="Working well" checked> It's working well</label>
+        <label class="choice"><input type="radio" name="kind" value="Something isn't working"> Something isn't working</label>
+        <label class="choice"><input type="radio" name="kind" value="Idea or request"> An idea or request</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="agent">Which agent do you use?</label>
+        <select id="agent" name="agent">
+          <option>Claude Cowork</option>
+          <option>Claude Code</option>
+          <option>ChatGPT Codex</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="version">agentCV version <span class="muted">(optional; it's in the VERSION file)</span></label>
+        <input id="version" name="version" type="text" inputmode="decimal" autocomplete="off" placeholder="for example 0.9.3">
+      </div>
+
+      <div class="field">
+        <label for="summary">One-line summary</label>
+        <input id="summary" name="summary" type="text" maxlength="120" aria-describedby="summary-err" required>
+        <p class="err" id="summary-err" hidden>Add a short summary first.</p>
+      </div>
+
+      <div class="field">
+        <label for="details">What happened? What did you expect?</label>
+        <textarea id="details" name="details" rows="6" aria-describedby="details-hint"></textarea>
+        <p class="small muted" id="details-hint">For problems, the step you were on and what your agent said help most.</p>
+      </div>
+
+      <div><button class="btn primary" type="submit">Continue to GitHub</button></div>
+      <p class="small muted">This opens a new issue on GitHub with your answers filled in. Nothing is sent until you submit it there.</p>
+    </form>
+  </section>
+
+  <section aria-labelledby="other-h">
+    <h2 id="other-h">Other ways to reach us</h2>
+    <ul>
+      <li>Browse or comment on <a href="https://github.com/duprejohn/agentcv/issues">existing issues</a>; someone may have hit the same thing.</li>
+      <li>No GitHub account? Message <a href="https://www.linkedin.com/in/duprejohn/">John on LinkedIn</a>.</li>
+    </ul>
+  </section>
+</main>
+<footer class="site"><div class="in">
+  <span>agentCV · <a href="https://github.com/duprejohn/agentcv/blob/main/LICENSE">MIT license</a></span>
+  <a href="https://github.com/duprejohn/agentcv/releases/latest">Latest release</a>
+  <a href="about.html">About the author</a>
+  <a href="feedback.html">Send feedback</a>
+  <span>Not affiliated with Anthropic or OpenAI.</span>
+</div></footer>
+<script src="nav.js"></script>
+<script src="feedback.js"></script>
+</body>
+</html>
